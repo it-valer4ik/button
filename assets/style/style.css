@@ -7,7 +7,6 @@
     position: relative;
 }
 
-
 .btn {
     background: rgb(0, 0, 0);
     color: #fff;
@@ -17,13 +16,8 @@
     text-align: center;
 }
 
-.btn:hover {
-    background: transparent;
-    color: rgb(255, 0, 0);
-}
-
-.btn:before,
-.btn:after {
+.btn::before,
+.btn::after {
     content: '';
     position: absolute;
     top: -4px;
@@ -34,16 +28,17 @@
     transition: 400ms ease all;
 }
 
-.btn:after {
-    right: inherit;
+.btn::after {
     top: inherit;
     left: 0;
     bottom: -4px;
-    height: 2px;
+
 }
 
-.btn:hover:before,
-.btn:hover:after {
+.btn:hover::before,
+.btn:hover::after {
     width: 100%;
     transition: 800ms ease all;
+    background: transparent;
+    color: rgb(255, 0, 0);
 }
