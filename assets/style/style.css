@@ -1,50 +1,47 @@
 .custom-btn {
-    width: 130px;
-    height: 40px;
+    /* width: 130px;
+    height: 40px; */
     padding: 10px 25px;
     cursor: pointer;
-    transition: all 0.3s ease;
     position: relative;
 }
 
 .btn {
     background: rgb(0, 0, 0);
     color: #fff;
-    line-height: 42px;
-    padding: 0;
     border: none;
-    text-align: center;
 }
 
 .btn::before,
 .btn::after {
     content: '';
-    position: absolute;
-    top: -4px;
-    right: 0;
+    display: block;
     height: 2px;
     width: 0;
+    position: absolute;
     background: rgb(255, 0, 0);
     transition: 400ms ease all;
 }
 
 .btn::after {
-    top: inherit;
     left: 0;
     bottom: -4px;
 
+}
+
+.btn::before {
+    right: 0;
+    top: -4px;
 }
 
 .btn:hover::before,
 .btn:hover::after {
     width: 100%;
     transition: 800ms ease all;
-    background: transparent;
-    color: rgb(255, 0, 0);
+
 }
 
-.overflow {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+.btn:hover {
+    color: rgb(255, 0, 0);
+    background-color: #fff;
 }
